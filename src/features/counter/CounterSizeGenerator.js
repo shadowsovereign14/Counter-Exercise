@@ -9,6 +9,7 @@ const   CounterSizeGenerator = (props) => {
         setSize(inputValue);
         changeSize(sizeNumber);
     }
+    
     return(
         <div>
             <span>Size: </span>

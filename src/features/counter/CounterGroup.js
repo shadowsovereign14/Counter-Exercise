@@ -15,7 +15,14 @@ const CounterGroup = (props) => {
 
     useEffect(() => {
         if(counter.length > sizeNumber) {
-            addHandler(counter[sizeNumber] * -1)
+            let number = 0;
+            const removedCounts = Array(counter.length).fill(0);
+            removedCounts.forEach((count, index) => {
+                if(index > sizeNumber - 1) {
+                    number -= (counter[index])
+                }
+            })
+            addHandler(number)
             counter.splice(sizeNumber, counter.length - sizeNumber)
         }
     }, [addHandler, counter, sizeNumber])
