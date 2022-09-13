@@ -5,8 +5,9 @@ const   CounterSizeGenerator = (props) => {
 
     const changeValue = (event) => {
         const inputValue = event.target.value;
+        const sizeNumber = inputValue === '' ? 0 : parseInt(inputValue);
         setSize(inputValue);
-        changeSize(inputValue);
+        changeSize(sizeNumber);
     }
     return(
         <div>
