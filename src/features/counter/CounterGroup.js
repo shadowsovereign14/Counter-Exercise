@@ -18,7 +18,7 @@ const CounterGroup = (props) => {
             let number = 0;
             const removedCounts = Array(counter.length).fill(0);
             removedCounts.forEach((count, index) => {
-                if(index > sizeNumber - 1) {
+                if(index > sizeNumber - 1 && counter[index]) {
                     number -= (counter[index])
                 }
             })
