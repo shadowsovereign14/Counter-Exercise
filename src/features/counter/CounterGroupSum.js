@@ -1,5 +1,9 @@
 const CounterGroupSum = (props) => {
-    return <div><span>Sum: </span>{parseInt(props.sum)}</div>
+    return(
+        <div>
+            <span>Sum: </span>{parseInt(props.sum)}
+        </div>
+    )
 }
 
 export default CounterGroupSum;
